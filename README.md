@@ -18,5 +18,5 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Contribution guidelines ###
 
-* Writing tests : 3 User stories comprising 17 acceptance criteria and one additional test scenario covered in 'grant-application.feature' file. 
+* Writing tests : 3 User stories comprising 17 acceptance criteria 'grant-application.feature' file. 
 
