@@ -1,0 +1,1045 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5259793378,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on business grant portal landing page",
+            "match": {
+              "location": "GrantApplicationSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22472771579,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click login with CorpPass to opt apply for a grant now option",
+            "match": {
+              "location": "GrantApplicationSteps.click_LoginWithCorpPass()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 35232598870,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Submit an application to apply for grant",
+        "description": "",
+        "id": "grant-application-process-through-business-grant-portal;submit-an-application-to-apply-for-grant",
+        "after": [
+          {
+            "result": {
+              "duration": 2176648502,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19641267932,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I login with own user details",
+            "match": {
+              "location": "GrantApplicationSteps.login_WithUserDetails(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "S1234567A",
+                  "Tan Ah Kow",
+                  "BGPQEDEMO",
+                  "Acceptor"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 202687278,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select \"Get New Grant\" on the \"My Grants\" dashboard to enter the Grant Picker",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Get New Grant\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"My Grants\"",
+                  "offset": 32
+                }
+              ],
+              "location": "GrantApplicationSteps.select_dashboardOptions(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 881759247,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select a sector \"IT\" for my business",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IT\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GrantApplicationSteps.select_businessSector(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 266388637,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I select a development area \"Bring my business overseas\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bring my business overseas\"",
+                  "offset": 28
+                }
+              ],
+              "location": "GrantApplicationSteps.select_developmentArea(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2230896062,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I select a functional area \"Market Readiness Assistance\" and apply for a grant",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Market Readiness Assistance\"",
+                  "offset": 27
+                }
+              ],
+              "location": "GrantApplicationSteps.select_functionalArea(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3762279763,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click \"Proceed\" to enter the form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Proceed\"",
+                  "offset": 8
+                }
+              ],
+              "location": "GrantApplicationSteps.click_ProceedToEnterForm(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 577596917,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I expect an application form should consists following sections",
+            "match": {
+              "location": "GrantApplicationSteps.verify_applicationFormSections(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Eligibility",
+                  "Contact Details",
+                  "Proposal",
+                  "Business Impact",
+                  "Cost",
+                  "Declare \u0026 Review"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 249250782,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I expect the \"Eligibility\" section should contain below questions",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eligibility\"",
+                  "offset": 13
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_contactDetailsQuestions(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Is the applicant registered in Singapore?",
+                  "Is the applicant\u0027s group sales turnover less than or equal to S$100m or is the applicant\u0027s group employment size less than or equal to 200?",
+                  "Does the applicant have at least 30% local equity?",
+                  "Are all the following statements true for this project?"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49828559,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I expect question \"Are all the following statements true for this project?\" is present with below statements",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Are all the following statements true for this project?\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_questionStatements(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "The applicant has not started work on this project",
+                  "The applicant has not made any payment to any supplier, vendor, or third party prior to applying for this grant",
+                  "The applicant has not signed any contractual agreement with any supplier, vendor, or third party prior to applying for this grant"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 24599242,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I expect each question in \"Eligibility\" section should be answered Yes or No through radio buttons",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eligibility\"",
+                  "offset": 26
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_questionAnswers(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11876102854,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I expect clicking the link in the warning message should launch a website in another window tab with the url \"https://www.ifaq.gov.sg/BGP/apps/fcd_faqmain.aspx#FAQ_1111145\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.ifaq.gov.sg/BGP/apps/fcd_faqmain.aspx#FAQ_1111145\"",
+                  "offset": 109
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_linkInWarningMsg(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2103734754,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I expect a warning message \"The applicant may not meet the eligibility criteria for this grant. Visit FAQ page for more information on other government grants.\" to be displayed if any question is answered as No",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The applicant may not meet the eligibility criteria for this grant. Visit FAQ page for more information on other government grants.\"",
+                  "offset": 27
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_warningMsg(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6716144193,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I expect clicking \"Save\" should save applicant\u0027s input in \"Eligibility\" section and refreshing the page should reload the saved values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Save\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Eligibility\"",
+                  "offset": 58
+                }
+              ],
+              "location": "GrantApplicationSteps.save_inputAndReload(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1216107602,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I expect a \"Main Contact Person\" subsection with following inputs in \"Contact Details\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Main Contact Person\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Contact Details\"",
+                  "offset": 69
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_inputsInContactDetails(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Job Title",
+                  "Contact No",
+                  "Email",
+                  "Alternate Contact Person�s Email",
+                  "Mailing Address"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4694680599,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I expect entering a valid postal code \"542299\" should auto-populate \"Blk/Hse No.\" and \"Street\" details with below valid values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"542299\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"Blk/Hse No.\"",
+                  "offset": 68
+                },
+                {
+                  "val": "\"Street\"",
+                  "offset": 86
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_autoPopulateDetails(String,String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "299B",
+                  "COMPASSVALE STREET"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 353186340,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I expect enabling a checkbox \"Same as registered address in Company Profile\" should auto-populate \"mailing address\" details with below values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Same as registered address in Company Profile\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"mailing address\"",
+                  "offset": 98
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_autoPopulatedMailingDetails(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "453123",
+                  "45",
+                  "CHOA CHU KANG CENTRAL",
+                  "03",
+                  "19"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 129429488,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "I expect a \"Letter Of Offer Addressee\" subsection with following inputs in \"Contact Details\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Letter Of Offer Addressee\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Contact Details\"",
+                  "offset": 75
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_inputsInContactDetails(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Job Title",
+                  "Email"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10956971071,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I fill \"Main Contact Person\" subsection with following values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Main Contact Person\"",
+                  "offset": 7
+                }
+              ],
+              "location": "GrantApplicationSteps.enter_mainContactPersonDetails(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Tan Ah Kow",
+                  "Test Engineer",
+                  "12345678",
+                  "mirkuteswapnil@gmail.com",
+                  "swapnilmirkute1988@gmail.com"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2302852204,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "I expect enabling a checkbox \"Same as main contact person\" should auto-populate \"Letter Of Offer Addressee\" details with below values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Same as main contact person\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"Letter Of Offer Addressee\"",
+                  "offset": 80
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_autoPopulatedMailingDetails(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Tan Ah Kow",
+                  "Test Engineer",
+                  "mirkuteswapnil@gmail.com"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9540976277,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I expect clicking \"Save\" should save applicant\u0027s input in \"Contact Details\" section and refreshing the page should reload the saved values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Save\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Contact Details\"",
+                  "offset": 58
+                }
+              ],
+              "location": "GrantApplicationSteps.save_inputAndReload(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21704561438,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I fill \"Proposal\" section with following values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Proposal\"",
+                  "offset": 7
+                }
+              ],
+              "location": "GrantApplicationSteps.enter_requiredDetailsinGivenSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Participate in Trade Fair",
+                  "TODAYS_DATE",
+                  "TODAYS_DATE+360d",
+                  "Promoting IT services",
+                  "Overseas Marketing and PR activities",
+                  "Brazil",
+                  "Yes"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13284624213,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I fill \"Business Impact\" section with following values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Business Impact\"",
+                  "offset": 7
+                }
+              ],
+              "location": "GrantApplicationSteps.enter_requiredDetailsinGivenSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "TODAYS_DATE",
+                  "100000-1300000-2500000-3500000",
+                  "100000-1300000-2500000-3500000",
+                  "Increase overseas sales",
+                  "Publicity"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 40294152086,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I fill \"Cost\" section with following values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Cost\"",
+                  "offset": 7
+                }
+              ],
+              "location": "GrantApplicationSteps.enter_requiredDetailsinGivenSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Singapore",
+                  "INTEST PTE. LTD.",
+                  "download.jpg",
+                  "200000",
+                  "Rental Expenses for business",
+                  "12",
+                  "20000",
+                  "TBC",
+                  "Test Engineer",
+                  "K3588417",
+                  "Foreigner",
+                  "Manager",
+                  "12",
+                  "15000"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42211849689,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "I acknowledge terms in \"Declare \u0026 Review\" section and I expect \"1\" validation error and the form should redirect to the \"Cost\" section with the missing details if mandatory input \"Name of Vendor\" is missing with value \"INTEST PTE. LTD.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Declare \u0026 Review\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"Cost\"",
+                  "offset": 120
+                },
+                {
+                  "val": "\"Name of Vendor\"",
+                  "offset": 179
+                },
+                {
+                  "val": "\"INTEST PTE. LTD.\"",
+                  "offset": 218
+                }
+              ],
+              "location": "GrantApplicationSteps.declare_acknowledgeTerms(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10280113289,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "I expect clicking \"Review\" button in \"Declare \u0026 Review\" section should redirect applicant to read-only summary page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Review\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"Declare \u0026 Review\"",
+                  "offset": 37
+                }
+              ],
+              "location": "GrantApplicationSteps.redirect_ToSummaryPage(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1718830935,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "I expect read-only summary page should correctly contain all the details previously filled in each form section menioned below",
+            "match": {
+              "location": "GrantApplicationSteps.verify_summaryPage(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Eligibility",
+                  "Contact Details",
+                  "Proposal",
+                  "Business Impact",
+                  "Cost",
+                  "Declare \u0026 Review"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63592926,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "I expect a checkbox \"Consent and Acknowledgement\" at the bottom of read-only summary page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Consent and Acknowledgement\"",
+                  "offset": 20
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_checkboxInSummaryPage(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11699055870,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "On submission of an application form I expect a success message \"Your application has been submitted.\" with reference id and receiving agency should be \"Enterprise Singapore\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Your application has been submitted.\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"Enterprise Singapore\"",
+                  "offset": 152
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_detailsOnFormSubmission(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25682121942,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "I expect \"My Grants\" dashboard should show the application under the \"Processing\" tab with project title \"Participate in Trade Fair\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"My Grants\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Processing\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"Participate in Trade Fair\"",
+                  "offset": 105
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_applicationUnderProcessing(String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3023145876,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on business grant portal landing page",
+            "match": {
+              "location": "GrantApplicationSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21398859619,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click login with CorpPass to opt apply for a grant now option",
+            "match": {
+              "location": "GrantApplicationSteps.click_LoginWithCorpPass()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3483779592,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 74,
+        "name": "Verify non submitted application in Drafts tab",
+        "description": "",
+        "id": "grant-application-process-through-business-grant-portal;verify-non-submitted-application-in-drafts-tab",
+        "after": [
+          {
+            "result": {
+              "duration": 854010524,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17406306280,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "I login with own user details",
+            "match": {
+              "location": "GrantApplicationSteps.login_WithUserDetails(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "S1234567A",
+                  "Tan Ah Kow",
+                  "BGPQEDEMO",
+                  "Acceptor"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 191731474,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "I select \"Get New Grant\" on the \"My Grants\" dashboard to enter the Grant Picker",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Get New Grant\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"My Grants\"",
+                  "offset": 32
+                }
+              ],
+              "location": "GrantApplicationSteps.select_dashboardOptions(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 821737489,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "I select a sector \"IT\" for my business",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IT\"",
+                  "offset": 18
+                }
+              ],
+              "location": "GrantApplicationSteps.select_businessSector(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 179358002,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "I select a development area \"Bring my business overseas\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bring my business overseas\"",
+                  "offset": 28
+                }
+              ],
+              "location": "GrantApplicationSteps.select_developmentArea(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2271539899,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "I select a functional area \"Market Readiness Assistance\" and apply for a grant",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Market Readiness Assistance\"",
+                  "offset": 27
+                }
+              ],
+              "location": "GrantApplicationSteps.select_functionalArea(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1567636649,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I click \"Proceed\" to enter the form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Proceed\"",
+                  "offset": 8
+                }
+              ],
+              "location": "GrantApplicationSteps.click_ProceedToEnterForm(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22587848572,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "I fill \"Proposal\" section with following values",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Proposal\"",
+                  "offset": 7
+                }
+              ],
+              "location": "GrantApplicationSteps.enter_requiredDetailsinGivenSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Participate in Murex Fair",
+                  "TODAYS_DATE",
+                  "TODAYS_DATE+360d",
+                  "Promoting marketing services",
+                  "Overseas Marketing and PR activities",
+                  "Brazil",
+                  "Yes"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16072678585,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "I expect \"My Grants\" dashboard should show the application under the \"Drafts\" tab with project title \"Participate in Murex Fair\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"My Grants\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Drafts\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"Participate in Murex Fair\"",
+                  "offset": 101
+                }
+              ],
+              "location": "GrantApplicationSteps.verify_applicationUnderProcessing(String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Grant application process through Business Grant Portal",
+    "description": "",
+    "id": "grant-application-process-through-business-grant-portal",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/cognizant/features/grant-application.feature",
+    "tags": []
+  }
+]

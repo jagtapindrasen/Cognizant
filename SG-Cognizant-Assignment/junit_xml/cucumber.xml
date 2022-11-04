@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="447.718998">
+<testcase classname="Grant application process through Business Grant Portal" name="Submit an application to apply for grant" time="359.461676">
+<system-out><![CDATA[Given I am on business grant portal landing page............................passed
+And I click login with CorpPass to opt apply for a grant now option.........passed
+When I login with own user details..........................................passed
+And I select "Get New Grant" on the "My Grants" dashboard to enter the Grant Picker.passed
+And I select a sector "IT" for my business..................................passed
+And I select a development area "Bring my business overseas"................passed
+And I select a functional area "Market Readiness Assistance" and apply for a grant.passed
+And I click "Proceed" to enter the form.....................................passed
+Then I expect an application form should consists following sections........passed
+And I expect the "Eligibility" section should contain below questions.......passed
+And I expect question "Are all the following statements true for this project?" is present with below statements.passed
+And I expect each question in "Eligibility" section should be answered Yes or No through radio buttons.passed
+And I expect a warning message "The applicant may not meet the eligibility criteria for this grant. Visit FAQ page for more information on other government grants." to be displayed if any question is answered as No.passed
+And I expect clicking "Save" should save applicant's input in "Eligibility" section and refreshing the page should reload the saved values.passed
+And I expect a "Main Contact Person" subsection with following inputs in "Contact Details" section.passed
+And I expect entering a valid postal code "542299" should auto-populate "Blk/Hse No." and "Street" details with below valid values.passed
+And I expect enabling a checkbox "Same as registered address in Company Profile" should auto-populate "mailing address" details with below values.passed
+And I expect a "Letter Of Offer Addressee" subsection with following inputs in "Contact Details" section.passed
+And I fill "Main Contact Person" subsection with following values...........passed
+And I expect enabling a checkbox "Same as main contact person" should auto-populate "Letter Of Offer Addressee" details with below values.passed
+And I expect clicking "Save" should save applicant's input in "Contact Details" section and refreshing the page should reload the saved values.passed
+And I fill "Proposal" section with following values.........................passed
+And I fill "Business Impact" section with following values..................passed
+And I fill "Cost" section with following values.............................passed
+And I acknowledge terms in "Declare & Review" section and I expect "1" validation error and the form should redirect to the "Cost" section with the missing details if mandatory input "Name of Vendor" is missing with value "INTEST PTE. LTD.".passed
+And I expect clicking "Review" button in "Declare & Review" section should redirect applicant to read-only summary page.passed
+And I expect read-only summary page should correctly contain all the details previously filled in each form section menioned below.passed
+And I expect a checkbox "Consent and Acknowledgement" at the bottom of read-only summary page.passed
+And On submission of an application form I expect a success message "Your application has been submitted." with reference id and receiving agency should be "Enterprise Singapore".passed
+And I expect "My Grants" dashboard should show the application under the "Processing" tab with project title "Participate in Trade Fair".passed
+]]></system-out>
+</testcase>
+<testcase classname="Grant application process through Business Grant Portal" name="Verify non submitted application in Drafts tab" time="88.257322">
+<system-out><![CDATA[Given I am on business grant portal landing page............................passed
+And I click login with CorpPass to opt apply for a grant now option.........passed
+When I login with own user details..........................................passed
+And I select "Get New Grant" on the "My Grants" dashboard to enter the Grant Picker.passed
+And I select a sector "IT" for my business..................................passed
+And I select a development area "Bring my business overseas"................passed
+And I select a functional area "Market Readiness Assistance" and apply for a grant.passed
+And I click "Proceed" to enter the form.....................................passed
+And I fill "Proposal" section with following values.........................passed
+And I expect "My Grants" dashboard should show the application under the "Drafts" tab with project title "Participate in Murex Fair".passed
+]]></system-out>
+</testcase>
+</testsuite>
